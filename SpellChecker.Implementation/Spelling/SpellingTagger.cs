@@ -12,6 +12,7 @@ using Microsoft.VisualStudio.Text.Tagging;
 using Microsoft.VisualStudio.Utilities;
 using SpellChecker.Definitions;
 using Microsoft.VisualStudio.Text.Editor;
+using System.Windows.Markup;
 
 namespace Microsoft.VisualStudio.Language.Spellchecker
 {
@@ -329,6 +330,7 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
         {
             TextBox textBox = new TextBox();
             textBox.SpellCheck.IsEnabled = true;
+            textBox.Language = XmlLanguage.GetLanguage("en-US");
 
             ITextSnapshot snapshot = _buffer.CurrentSnapshot;
 
